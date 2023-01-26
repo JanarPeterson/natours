@@ -21,11 +21,23 @@
         opacity: 0;
         transform: translate(-50%, -50%) scale(.2);
         transition: all .4s .2s;
+
+        @include response(phone) {
+            display: block;
+        }
     }
 
     &__left {
         width: 33.333333333%;
         display: table-cell;
+
+        @include response(phone) {
+            width: 100%;
+            display: inline-block;
+            margin-top: 8rem;
+            text-align: center;
+            height: 17rem;
+        }
     }
 
     &__right {
@@ -33,11 +45,26 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+
+        @include response(phone) {
+            width: 100%;
+            display: inline-block;
+            text-align: center;
+        }
     }
 
     &__img {
         display: block;
         width: 100%;
+
+        @include response(phone) {
+            display: inline;
+            width: 45%;
+            height: 100%;
+            border: 4px solid $color-primary;
+            border-radius: 5px;
+        }
     }
 
     &__text {
